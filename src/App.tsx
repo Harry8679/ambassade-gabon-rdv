@@ -4,6 +4,7 @@ import { VERT, JAUNE, BLEU } from "./data/constants";
 import { donneesInitiales } from "./data/seed";
 import { EspaceCitoyen } from "./components/EspaceCitoyen";
 import { EspaceAdmin } from "./components/EspaceAdmin";
+import { Drapeau } from "./components/Drapeau";
 
 /* =============================================================================
    AMBASSADE DU GABON EN FRANCE — Prise de rendez-vous passeport
@@ -48,11 +49,12 @@ export default function App() {
       <header className="gab-header">
         <div className="gab-header-in">
           <div className="gab-brand">
-            <div className="gab-blason" aria-hidden="true">
+            {/* <div className="gab-blason" aria-hidden="true">
               <span style={{ background: VERT }} />
               <span style={{ background: JAUNE }} />
               <span style={{ background: BLEU }} />
-            </div>
+            </div> */}
+            <Drapeau hauteur={40} />
             <div>
               <h1>Ambassade de la République gabonaise en France</h1>
               <p>Service des passeports — Prise de rendez-vous en ligne</p>

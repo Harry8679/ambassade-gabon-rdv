@@ -1,0 +1,819 @@
+/* =============================================================================
+   Feuille de style — Ambassade du Gabon, prise de rendez-vous passeport
+   Couleurs : vert #009639, jaune #FCD116, bleu #3A75C4
+   ========================================================================== */
+
+* { box-sizing: border-box; margin: 0; }
+
+.gab-app {
+  font-family: "Public Sans", system-ui, sans-serif;
+  color: #1a2330;
+  background: #eef1ee;
+  min-height: 100vh;
+}
+
+.gab-tricolore {
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    #009639 0 33.33%,
+    #fcd116 33.33% 66.66%,
+    #3a75c4 66.66% 100%
+  );
+}
+
+/* ---- En-tête ---- */
+.gab-header { background: #fff; border-bottom: 1px solid #e2e6e2; }
+.gab-header-in {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.gab-brand { display: flex; align-items: center; gap: 14px; }
+.gab-blason {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
+}
+.gab-blason span { flex: 1; }
+.gab-brand h1 {
+  font-family: "Spectral", serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0c1b2a;
+  line-height: 1.25;
+}
+.gab-brand p { font-size: 12.5px; color: #5d6b7a; margin-top: 2px; }
+.gab-switch {
+  display: flex;
+  background: #eef1ee;
+  border-radius: 9px;
+  padding: 3px;
+}
+.gab-switch button {
+  border: 0;
+  background: transparent;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 7px;
+  cursor: pointer;
+  color: #5d6b7a;
+  font-family: inherit;
+}
+.gab-switch button.on {
+  background: #fff;
+  color: #009639;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.gab-main { max-width: 1080px; margin: 0 auto; padding: 32px 24px 56px; }
+.gab-footer {
+  text-align: center;
+  font-size: 12px;
+  color: #8b97a3;
+  padding: 24px;
+  border-top: 1px solid #e2e6e2;
+}
+
+/* ---- Citoyen : accueil ---- */
+.gab-retour {
+  background: none;
+  border: 0;
+  color: #5d6b7a;
+  font-size: 13px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  font-family: inherit;
+  font-weight: 600;
+}
+.gab-hero { text-align: center; margin-bottom: 32px; }
+.gab-kicker {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #009639;
+}
+.gab-hero h2 {
+  font-family: "Spectral", serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #0c1b2a;
+  margin: 10px 0;
+  line-height: 1.15;
+}
+.gab-hero p {
+  max-width: 540px;
+  margin: 0 auto;
+  color: #5d6b7a;
+  font-size: 15px;
+}
+.gab-services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.gab-service {
+  background: #fff;
+  border: 1px solid #e2e6e2;
+  border-radius: 14px;
+  padding: 26px;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+.gab-service:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(12, 27, 42, 0.12);
+  border-color: #009639;
+}
+.gab-service-ic {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+.gab-service h3 {
+  font-family: "Spectral", serif;
+  font-size: 20px;
+  color: #0c1b2a;
+}
+.gab-service p { color: #5d6b7a; font-size: 14px; margin: 8px 0 14px; }
+.gab-service-go { color: #009639; font-weight: 700; font-size: 14px; }
+
+/* ---- Cartes ---- */
+.gab-card {
+  background: #fff;
+  border: 1px solid #e2e6e2;
+  border-radius: 14px;
+  padding: 28px;
+}
+.gab-card-etroite { max-width: 520px; margin: 0 auto; }
+.gab-h3 {
+  font-family: "Spectral", serif;
+  font-size: 21px;
+  color: #0c1b2a;
+  margin-bottom: 6px;
+}
+.gab-muted { color: #5d6b7a; font-size: 14px; margin-bottom: 18px; }
+.gab-astuce { font-size: 12.5px; color: #8b97a3; margin: 8px 0 4px; }
+.gab-astuce code,
+.gab-mono { font-family: "SF Mono", Menlo, monospace; }
+.gab-erreur {
+  color: #b42318;
+  font-size: 13px;
+  margin: 10px 0;
+  background: #fef3f2;
+  padding: 9px 12px;
+  border-radius: 8px;
+}
+
+/* ---- Stepper ---- */
+.gab-stepper {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+.gab-step {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  color: #8b97a3;
+  font-weight: 600;
+}
+.gab-step span {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #eef1ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+.gab-step.fait { color: #009639; }
+.gab-step.fait span { background: #009639; color: #fff; }
+
+/* ---- Choix ---- */
+.gab-choix {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.gab-choix-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border: 1.5px solid #e2e6e2;
+  border-radius: 11px;
+  padding: 16px;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+.gab-choix-item:hover { border-color: #009639; }
+.gab-choix-item.sel { border-color: #009639; background: #f1faf4; }
+.gab-radio {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 2px solid #c4ccd4;
+  margin-top: 2px;
+}
+.gab-choix-item.sel .gab-radio {
+  border-color: #009639;
+  background: #009639;
+  box-shadow: inset 0 0 0 3px #fff;
+}
+.gab-choix-item strong {
+  display: block;
+  font-size: 14.5px;
+  color: #0c1b2a;
+}
+.gab-choix-item em {
+  font-style: normal;
+  font-size: 13px;
+  color: #5d6b7a;
+}
+
+/* ---- Boutons ---- */
+.gab-btn {
+  border: 0;
+  border-radius: 9px;
+  padding: 12px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+.gab-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.gab-btn-primaire { background: #009639; color: #fff; }
+.gab-btn-bleu { background: #3a75c4; color: #fff; }
+.gab-btn-clair { background: #eef1ee; color: #1a2330; }
+.gab-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 22px;
+}
+.gab-btn-bas { align-self: flex-end; }
+
+/* ---- Calendrier ---- */
+.gab-cal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+.gab-cal-nav strong {
+  font-family: "Spectral", serif;
+  font-size: 16px;
+  text-transform: capitalize;
+  min-width: 140px;
+  text-align: center;
+}
+.gab-cal-nav button {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid #e2e6e2;
+  background: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+.gab-cal-nav button:disabled { opacity: 0.35; cursor: not-allowed; }
+.gab-cal-grille {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+.gab-cal-jour-tete {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #8b97a3;
+  padding: 6px 0;
+  text-transform: uppercase;
+}
+.gab-cal-case {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 9px;
+  border: 1.5px solid transparent;
+  background: #f4f6f4;
+  cursor: default;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gab-cal-num { font-size: 14px; font-weight: 600; color: #1a2330; }
+.gab-cal-case.ferme { background: transparent; }
+.gab-cal-case.ferme .gab-cal-num { color: #c4ccd4; }
+.gab-cal-case.dispo {
+  background: #fff;
+  border-color: #d6ddd6;
+  cursor: pointer;
+}
+.gab-cal-case.dispo:hover { border-color: #009639; background: #f1faf4; }
+.gab-cal-case.complet { background: #e9ece9; cursor: not-allowed; }
+.gab-cal-case.complet .gab-cal-num { color: #97a1a9; }
+.gab-cal-case.sel { background: #009639; border-color: #009639; }
+.gab-cal-case.sel .gab-cal-num { color: #fff; }
+.gab-cal-tag {
+  position: absolute;
+  bottom: 5px;
+  font-size: 8.5px;
+  font-weight: 700;
+  color: #97a1a9;
+  text-transform: uppercase;
+}
+.gab-cal-pt {
+  position: absolute;
+  bottom: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #009639;
+}
+.gab-cal-case.sel .gab-cal-pt { background: #fcd116; }
+.gab-legende {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 16px;
+  font-size: 12px;
+  color: #5d6b7a;
+}
+.gab-legende span { display: flex; align-items: center; gap: 6px; }
+.gab-legende i {
+  width: 13px;
+  height: 13px;
+  border-radius: 4px;
+  display: block;
+}
+.lg-dispo { background: #fff; border: 1.5px solid #009639; }
+.lg-complet { background: #e9ece9; }
+.lg-ferme { background: transparent; border: 1.5px dashed #c4ccd4; }
+
+/* ---- Créneaux ---- */
+.gab-creneaux {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.gab-creneau {
+  padding: 14px 8px;
+  border-radius: 10px;
+  border: 1.5px solid #e2e6e2;
+  background: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a2330;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.gab-creneau:hover { border-color: #009639; }
+.gab-creneau.sel { background: #009639; border-color: #009639; color: #fff; }
+.gab-creneau.occupe {
+  background: #f0f1f0;
+  color: #aab2ba;
+  cursor: not-allowed;
+  border-color: #f0f1f0;
+}
+.gab-creneau em { font-style: normal; font-size: 10px; font-weight: 600; }
+
+/* ---- Formulaire ---- */
+.gab-recap-mini {
+  background: #f1faf4;
+  border-radius: 8px;
+  padding: 9px 13px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #009639;
+  margin-bottom: 18px;
+}
+.gab-grille-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.gab-champ-large { grid-column: 1 / -1; }
+.gab-label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #5d6b7a;
+  margin-bottom: 5px;
+}
+.gab-input {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1.5px solid #e2e6e2;
+  border-radius: 9px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fff;
+}
+.gab-input:focus { outline: 0; border-color: #009639; }
+.gab-rgpd { font-size: 11.5px; color: #8b97a3; margin-top: 14px; }
+
+/* ---- Récap / confirmation ---- */
+.gab-recap-bloc,
+.gab-info-bloc {
+  background: #f4f6f4;
+  border-radius: 11px;
+  padding: 6px 16px;
+  margin: 16px 0;
+}
+.gab-ligne {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e7eae7;
+  font-size: 14px;
+}
+.gab-ligne:last-child { border-bottom: 0; }
+.gab-ligne span { color: #5d6b7a; }
+.gab-ligne strong { color: #0c1b2a; text-align: right; }
+.gab-fort {
+  font-family: "SF Mono", Menlo, monospace;
+  font-size: 15px;
+  color: #009639 !important;
+}
+.gab-confirme { text-align: center; }
+.gab-check {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+.gab-confirme .gab-recap-bloc,
+.gab-confirme .gab-ligne { text-align: left; }
+
+/* ---- Admin ---- */
+.gab-admin-tete { margin-bottom: 20px; }
+.gab-admin-tete h2 {
+  font-family: "Spectral", serif;
+  font-size: 26px;
+  color: #0c1b2a;
+}
+.gab-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.gab-kpi {
+  background: #fff;
+  border: 1px solid #e2e6e2;
+  border-radius: 12px;
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+}
+.gab-kpi-n {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Spectral", serif;
+}
+.gab-kpi-t { font-size: 12.5px; color: #5d6b7a; margin-top: 2px; }
+.gab-kpi-barre {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+}
+.gab-onglets { display: flex; gap: 6px; margin-bottom: 16px; }
+.gab-onglets button {
+  border: 0;
+  background: transparent;
+  padding: 10px 16px;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #5d6b7a;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.gab-onglets button.on {
+  background: #fff;
+  color: #009639;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+.gab-filtres {
+  display: flex;
+  gap: 14px;
+  align-items: flex-end;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+.gab-grow { flex: 1; min-width: 200px; }
+
+/* ---- Table ---- */
+.gab-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+.gab-table th {
+  text-align: left;
+  padding: 10px 12px;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #8b97a3;
+  border-bottom: 2px solid #e2e6e2;
+}
+.gab-table td { padding: 12px; border-bottom: 1px solid #eef1ee; }
+.gab-table tr:hover td { background: #f8faf8; }
+.gab-vide {
+  text-align: center;
+  color: #8b97a3;
+  padding: 26px !important;
+}
+.gab-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 9px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.gab-btn-mini {
+  background: #3a75c4;
+  color: #fff;
+  border: 0;
+  border-radius: 7px;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+.gab-mini-muted { font-size: 12px; color: #8b97a3; }
+
+/* ---- Paramètres ---- */
+.gab-duree-choix {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 16px 0;
+}
+.gab-duree {
+  padding: 14px 8px;
+  border-radius: 10px;
+  border: 1.5px solid #e2e6e2;
+  background: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a2330;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.gab-duree.sel { border-color: #009639; background: #f1faf4; color: #009639; }
+.gab-duree em {
+  font-style: normal;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #8b97a3;
+}
+.gab-duree.sel em { color: #009639; }
+
+/* ---- Toasts emails ---- */
+.gab-toasts {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 50;
+}
+.gab-toast {
+  background: #0c1b2a;
+  color: #fff;
+  border-radius: 11px;
+  padding: 13px 16px;
+  max-width: 320px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  border-left: 4px solid #fcd116;
+  animation: gabIn 0.25s ease;
+}
+.gab-toast strong { display: block; font-size: 13px; }
+.gab-toast span { font-size: 12px; color: #b9c2cc; }
+.gab-toast em {
+  display: block;
+  font-style: normal;
+  font-size: 11.5px;
+  color: #8fa0b0;
+  margin-top: 4px;
+}
+@keyframes gabIn {
+  from { opacity: 0; transform: translateX(20px); }
+}
+
+@media (max-width: 720px) {
+  .gab-grille-form,
+  .gab-kpis,
+  .gab-duree-choix,
+  .gab-creneaux { grid-template-columns: 1fr 1fr; }
+  .gab-brand h1 { font-size: 15px; }
+  .gab-hero h2 { font-size: 26px; }
+}
+
+/* =============================================================================
+   Suivi de dossier — timeline, alerte, pills
+   ========================================================================== */
+
+.gab-suivi-tete {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eef1ee;
+}
+.gab-suivi-ref {
+  font-family: "SF Mono", Menlo, monospace;
+  font-size: 12px;
+  color: #009639;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.gab-suivi-tete h3 { margin-top: 4px; }
+.gab-suivi-type {
+  background: #f1faf4;
+  color: #009639;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.gab-alerte {
+  background: #fef3f2;
+  border-left: 4px solid #b42318;
+  padding: 14px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.gab-alerte strong {
+  display: block;
+  color: #b42318;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.gab-alerte p { color: #5d6b7a; font-size: 13px; line-height: 1.45; }
+
+.gab-timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.gab-timeline::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 14px;
+  bottom: 14px;
+  width: 2px;
+  background: #e2e6e2;
+}
+.gab-tl-item {
+  display: flex;
+  gap: 14px;
+  padding: 10px 0;
+  position: relative;
+}
+.gab-tl-pt {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #d6ddd6;
+  background: #fff;
+  flex-shrink: 0;
+  z-index: 1;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: transparent;
+}
+.gab-tl-item.fait .gab-tl-pt {
+  background: #009639;
+  border-color: #009639;
+  color: #fff;
+}
+.gab-tl-item.fait.courant .gab-tl-pt {
+  background: #fcd116;
+  border-color: #fcd116;
+  color: transparent;
+  box-shadow: 0 0 0 5px rgba(252, 209, 22, 0.25);
+}
+.gab-tl-contenu { flex: 1; }
+.gab-tl-ligne {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.gab-tl-ligne strong { font-size: 14.5px; color: #0c1b2a; }
+.gab-tl-item:not(.fait) .gab-tl-ligne strong { color: #aab2ba; }
+.gab-tl-ligne em {
+  font-style: normal;
+  font-size: 11.5px;
+  color: #5d6b7a;
+  font-family: "SF Mono", Menlo, monospace;
+}
+.gab-tl-contenu p {
+  font-size: 12.5px;
+  color: #5d6b7a;
+  margin-top: 3px;
+  line-height: 1.45;
+}
+.gab-tl-item:not(.fait) .gab-tl-contenu p { color: #c4ccd4; }
+
+/* =============================================================================
+   Admin — pills d'étape, sous-libellés, select inline
+   ========================================================================== */
+
+.gab-pill {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.gab-pill-vert { background: #009639; color: #fff; }
+.gab-pill-jaune { background: #fcd116; color: #7a5b00; }
+.gab-pill-bleu { background: #3a75c4; color: #fff; }
+.gab-pill-rouge { background: #fef3f2; color: #b42318; }
+
+.gab-sous {
+  font-size: 11.5px;
+  color: #8b97a3;
+  margin-top: 2px;
+}
+
+.gab-select {
+  padding: 8px 10px;
+  border: 1.5px solid #e2e6e2;
+  border-radius: 8px;
+  background: #fff;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #009639;
+  cursor: pointer;
+  max-width: 220px;
+}
+.gab-select:focus { outline: 0; border-color: #009639; }
+
+/* Le 5ème KPI fait sauter la grille à 4 cols. On passe à 5. */
+.gab-kpis { grid-template-columns: repeat(5, 1fr); }
+@media (max-width: 1080px) {
+  .gab-kpis { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 720px) {
+  .gab-kpis { grid-template-columns: 1fr 1fr; }
+}

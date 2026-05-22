@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { Reservation, Toast } from "./types";
-import { VERT, JAUNE, BLEU } from "./data/constants";
+// import { VERT, JAUNE, BLEU } from "./data/constants";
 import { donneesInitiales } from "./data/seed";
 import { EspaceCitoyen } from "./components/EspaceCitoyen";
 import { EspaceAdmin } from "./components/EspaceAdmin";
